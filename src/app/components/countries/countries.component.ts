@@ -10,14 +10,18 @@ import { Country } from '../country/model/country';
 })
 export class CountriesComponent implements OnInit {
 
-   keyWord: string = '';
+  keyWord: string = '';
 
   countries$ : Observable<Array<Country>>
   
   constructor(private api : ApiService) { }
 
   ngOnInit(): void {
-    this.countries$ = this.api.getCountries();
+    this.countries$ = this.api.getCountries(this.keyWord);
+  }
+
+  search(){
+    this.countries$ = this.api.getCountries(this.keyWord);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Country } from '../components/country/model/country';
 import { COUNTRIES } from '../data/countries';
 
 @Injectable({
@@ -8,10 +9,18 @@ import { COUNTRIES } from '../data/countries';
 export class ApiService {
 
   countries = COUNTRIES;
-
+  filteredCountries : Country[] = [];
   constructor() { }
-
-  getCountries(): Observable<any[]>{
-    return of (this.countries);
+  
+  getCountries(name: string): Observable<any[]>{
+    if (name == ''){
+      return of (this.countries);
+    }
+    else{
+    this.filteredCountries = this.countries.filter((countri) => {
+      return countri.name?.common.toLowerCase().startsWith(name.toLowerCase());
+    });
+    return of (this.filteredCountries);
+    }
   }
 }
