@@ -12,7 +12,12 @@ export class CountriesComponent implements OnInit {
 
   keyWord: string = '';
 
+  @Input()continent: string = '';
+
+
+
   countries$ : Observable<Array<Country>>
+
   
   constructor(private api : ApiService) { }
 

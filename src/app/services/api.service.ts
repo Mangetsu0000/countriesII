@@ -11,16 +11,18 @@ export class ApiService {
   countries = COUNTRIES;
   filteredCountries : Country[] = [];
   constructor() { }
-  
+
   getCountries(name: string): Observable<any[]>{
-    if (name == ''){
+    if (name.trim() == '' ){
       return of (this.countries);
     }
     else{
     this.filteredCountries = this.countries.filter((countri) => {
-      return countri.name?.common.toLowerCase().startsWith(name.toLowerCase());
+      
+      return countri.name?.common.toLowerCase().includes(name.toLowerCase());
     });
     return of (this.filteredCountries);
     }
   }
+  
 }
