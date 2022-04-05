@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CountriesComponent } from './components/countries/countries.component';
 import { CountryComponent } from './components/country/country.component';
 import { HomeComponent } from './components/home/home.component';
-import { CountriesPageComponent } from './components/countries-page/countries-page.component';
 import { ContinentsPageComponent } from './components/continents-page/continents-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
     CountriesComponent,
     CountryComponent,
     HomeComponent,
-    CountriesPageComponent,
     ContinentsPageComponent,
     NavBarComponent,
   ],
