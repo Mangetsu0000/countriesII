@@ -22,11 +22,11 @@ export class CountriesComponent implements OnInit {
   constructor(private api : ApiService) { }
 
   ngOnInit(): void {
-    this.countries$ = this.api.getCountries(this.keyWord);
+    this.countries$ = this.api.getCountries(this.keyWord, "");
   }
 
   search(){
-    this.countries$ = this.api.getCountries(this.keyWord);
+    this.countries$ = this.api.getCountries(this.keyWord, "");
   }
 
 }
