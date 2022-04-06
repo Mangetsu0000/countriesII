@@ -1,4 +1,4 @@
-<div  class="country-card mb-2">
+<div  [routerLink]="['countries']" class="country-card mb-2">
     <!-- <h2>{{ country?.population | number : '1.0'}}</h2> -->
     <h2 class="text-center">{{ country?.name?.common}}</h2>
     <img class="mb-1" src="{{ country?.flags?.png}}" width="100%" height="100%">

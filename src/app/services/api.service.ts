@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 import { Country } from '../components/country/model/country';
 import { COUNTRIES } from '../data/countries';
 
@@ -12,6 +12,8 @@ export class ApiService {
   countries = COUNTRIES;
   filteredCountries : Country[] = [];
   filteredCountriesByContinent: Country[]= [];
+  private selectedCountrySubject = new Subject<Country>();
+  selectedCountry$ = this.selectedCountrySubject.asObservable();
   constructor(private routerService: Router) { }
 
   getCountries(name: string): Observable<any[]>{
@@ -35,4 +37,7 @@ export class ApiService {
     return of (this.filteredCountriesByContinent);
   }
   
+  selectCountry(country: Country){
+    this.selectedCountrySubject.next(country);
+  }
 }

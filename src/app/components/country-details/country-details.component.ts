@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { Country } from '../country/model/country';
 
 @Component({
   selector: 'app-country-details',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryDetailsComponent implements OnInit {
 
-  constructor() { }
+  country:Country | undefined;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.selectedCountry$.subscribe((country)=>{this.country= country});
   }
 
 }
