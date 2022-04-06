@@ -12,21 +12,24 @@ export class CountriesComponent implements OnInit {
 
   keyWord: string = '';
 
-  @Input()continent: string = '';
+  filteredCountriesByContinent:[]=[];
+
+  // continent$: Observable<string>;
 
 
 
-  countries$ : Observable<Array<Country>>
+  countries$ : Observable<Array<Country>> | undefined
 
   
   constructor(private api : ApiService) { }
 
   ngOnInit(): void {
-    this.countries$ = this.api.getCountries(this.keyWord, "");
+    this.countries$ = this.api.getCountries(this.keyWord);
+    // this.countries$= this.api.getCountriesByContinent(this.continent$);
   }
 
   search(){
-    this.countries$ = this.api.getCountries(this.keyWord, "");
+    this.countries$ = this.api.getCountries(this.keyWord);
   }
 
 }

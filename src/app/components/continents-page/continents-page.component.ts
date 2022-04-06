@@ -13,23 +13,23 @@ export class ContinentsPageComponent implements OnInit {
 
   setContinentAfrica(){
     this.continent = 'Africa'
-    this.apiService.getCountries("",this.continent);
+    this.apiService.getCountriesByContinent(this.continent);
   }
   setContinentAmerica(){
     this.continent = 'Americas'
-    this.apiService.getCountries("",this.continent);
+    this.apiService.getCountriesByContinent(this.continent);
   }
   setContinentAsia(){
     this.continent = 'Asia'
-    this.apiService.getCountries("",this.continent);
+    this.apiService.getCountriesByContinent(this.continent);
   }
   setContinentEurope(){
     this.continent = 'Europe'
-    this.apiService.getCountries("",this.continent);
+    this.apiService.getCountriesByContinent(this.continent);
   }
   setContinentAustralia(){
     this.continent = 'Oceania'
-    this.apiService.getCountries("",this.continent);
+    this.apiService.getCountriesByContinent(this.continent);
   }
   
 

@@ -14,34 +14,25 @@ export class ApiService {
   filteredCountriesByContinent: Country[]= [];
   constructor(private routerService: Router) { }
 
-  getCountries(name: string, continent: string): Observable<any[]>{
-    if (name.trim() == '' && continent ==''){
+  getCountries(name: string): Observable<any[]>{
+    if (name.trim() == ''){
       return of (this.countries);
     }
-    else if( continent=='' && name !==''){
-    this.filteredCountries = this.countries.filter((country) => {
+    else{
+    this.filteredCountries = this.countries.filter((countri) => {
       
-      return country.name?.common.toLowerCase().includes(name.toLowerCase());
+      return countri.name?.common.toLowerCase().includes(name.toLowerCase());
     });
+    return of (this.filteredCountries);
     }
-    else if( continent !=='' && name == ""){
-      this.routerService.navigate(['/countries', continent]);
-      this.filteredCountries = this.countries.filter((country)=>{
-        return country.region?.toLowerCase() === continent.toLowerCase();
-      }); console.log(this.filteredCountries);
-    }
-    return of (this.filteredCountries); 
   }
-
-
-
-  // getCountriesByContinent(continent: string): Observable<any[]>{
-  //   this.routerService.navigate(['/countries', continent]);
-  //   this.filteredCountriesByContinent = this.countries.filter((country)=>{
-  //     return country.region?.toLowerCase() === continent.toLowerCase();
-  //   }); console.log(this.filteredCountriesByContinent);
+  getCountriesByContinent(continent: string): Observable<any[]>{
+    this.routerService.navigate(['/countries', continent]);
+    this.filteredCountriesByContinent = this.countries.filter((country)=>{
+      return country.region?.toLowerCase() === continent.toLowerCase();
+    }); console.log(this.filteredCountriesByContinent);
     
-  //   return of (this.filteredCountriesByContinent);
-  // }
+    return of (this.filteredCountriesByContinent);
+  }
   
 }
