@@ -9,7 +9,8 @@ const routes: Routes = [{path: '', component: HomeComponent},
                         {path: 'home', component: HomeComponent},
                         {path: 'countries', component: CountriesComponent},
                         {path: 'countries/:continent', component: CountriesComponent},
-                        {path: 'countries/:details/:name', component: CountryDetailsComponent},
+                        {path: 'countries/details/:name', component: CountryDetailsComponent},
+                        
                         {path: 'countries/:name', component: CountriesComponent},
                         {path: 'continents', component: ContinentsPageComponent}];
 
