@@ -11,13 +11,11 @@ export class ApiService {
 
   countries = COUNTRIES;
 
-  selectedCountry:Country | null;
+  selectedCountry:Country | null = null;
 
   filteredCountries : Country[] = [];
   filteredCountriesByContinent: Country[]= [];
   
-  // private selectedCountrySubject = new Subject<Country>();
-  // selectedCountry$ = this.selectedCountrySubject.asObservable();
   
   constructor(private routerService: Router) { }
 
@@ -28,24 +26,21 @@ export class ApiService {
     else{
     this.filteredCountries = this.countries.filter((countri) => {
       
-      return countri.name?.common.toLowerCase().includes(name.toLowerCase());
+      return countri?.name?.common?.toLowerCase().includes(name.toLowerCase());
     });
     return of (this.filteredCountries);
     }
   }
   getCountriesByContinent(continent: string): Observable<any[]>{
+    this.countries = COUNTRIES;
     this.routerService.navigate(['/countries', continent]);
     this.filteredCountriesByContinent = this.countries.filter((country)=>{
       return country.region?.toLowerCase() === continent.toLowerCase();
     }); console.log(this.filteredCountriesByContinent);
-    
-    return of (this.filteredCountriesByContinent);
+    this.countries = this.filteredCountriesByContinent;
+    return of (this.countries);
   }
   
-  selectCountry(country: Country){
-    // this.selectedCountrySubject.next(country);
-    
-  }
   setCountry(country : Country){
     this.selectedCountry = country;
   }

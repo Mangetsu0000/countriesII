@@ -19,10 +19,7 @@ export class CountryComponent implements OnInit {
   onSeclectCountry(){
     if (this.country){
       this.routerService.navigate(['/countries/details',  this.country?.name?.common]);
-      console.log(`should be displaying ${this.country?.name?.common}'s details`);
-      console.log('this country is ', this.country);
       this.apiService.setCountry(this.country);
-      
     }
   }
 }

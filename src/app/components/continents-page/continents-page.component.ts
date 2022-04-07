@@ -18,6 +18,7 @@ export class ContinentsPageComponent implements OnInit {
   setContinentAmerica(){
     this.continent = 'Americas'
     this.apiService.getCountriesByContinent(this.continent);
+    
   }
   setContinentAsia(){
     this.continent = 'Asia'

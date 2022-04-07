@@ -1,4 +1,5 @@
-export const COUNTRIES = [
+import {Country} from '../components/country/model/country'
+export const COUNTRIES : Country[] = [
   {
     name: {
       common: 'Montenegro',
