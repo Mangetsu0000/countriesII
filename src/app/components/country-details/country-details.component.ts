@@ -9,12 +9,19 @@ import { Country } from '../country/model/country';
 })
 export class CountryDetailsComponent implements OnInit {
 
-  country:Country | undefined;
+  country:Country | null = null;
+
+  languages:string='';
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.selectedCountry$.subscribe((country)=>{this.country= country});
+    // this.apiService.selectedCountry$.subscribe((country)=>{this.country= country});
+    // console.log(this.country);
+    this.country =this.apiService.getCountry();
+    // this.languages = Object.values(this.country?.languages).toString();
+    console.log(this.country?.languages);
+    
   }
 
 }

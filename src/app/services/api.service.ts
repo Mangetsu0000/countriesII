@@ -10,10 +10,15 @@ import { COUNTRIES } from '../data/countries';
 export class ApiService {
 
   countries = COUNTRIES;
+
+  selectedCountry:Country | null;
+
   filteredCountries : Country[] = [];
   filteredCountriesByContinent: Country[]= [];
-  private selectedCountrySubject = new Subject<Country>();
-  selectedCountry$ = this.selectedCountrySubject.asObservable();
+  
+  // private selectedCountrySubject = new Subject<Country>();
+  // selectedCountry$ = this.selectedCountrySubject.asObservable();
+  
   constructor(private routerService: Router) { }
 
   getCountries(name: string): Observable<any[]>{
@@ -38,7 +43,13 @@ export class ApiService {
   }
   
   selectCountry(country: Country){
-    this.selectedCountrySubject.next(country);
+    // this.selectedCountrySubject.next(country);
     
+  }
+  setCountry(country : Country){
+    this.selectedCountry = country;
+  }
+  getCountry(){
+    return this.selectedCountry;
   }
 }

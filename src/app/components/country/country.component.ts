@@ -10,7 +10,7 @@ import { Country } from './model/country';
 })
 export class CountryComponent implements OnInit {
 
-  @Input() country: Country | null = null;
+  @Input() country: Country | undefined;
   
   constructor(private apiService: ApiService, private routerService: Router) { }
 
@@ -18,10 +18,10 @@ export class CountryComponent implements OnInit {
   }
   onSeclectCountry(){
     if (this.country){
-      this.apiService.selectCountry(this.country);
       this.routerService.navigate(['/countries/details',  this.country?.name?.common]);
       console.log(`should be displaying ${this.country?.name?.common}'s details`);
       console.log('this country is ', this.country);
+      this.apiService.setCountry(this.country);
       
     }
   }

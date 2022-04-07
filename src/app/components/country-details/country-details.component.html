@@ -2,13 +2,13 @@
     <div class="col-lg-8 push-lg-4">
       <div class="tab-content p-b-3">
         <div class="tab-pane active" id="profile">
-          <h4 class="m-y-2">Cv
+          <h4 class="m-y-2">
             {{ country?.name?.common}}
           </h4>
           <div class="d-flex justify-content-center">
-            <!-- <img width="150px" height="150px"
+            <img width="150px" height="150px"
                  class="rounded-circle align-content-center"
-                 src="assets/images/{{cv?.path ?? '' | defaultImage}}" alt="{{cv?.name}}"> -->
+                 src="{{ country?.flags?.png}}">
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -17,32 +17,32 @@
                 <tbody>
                 <tr>
                   <td>
-                    <!-- <strong>Name</strong> {{cv?.name}} -->
+                    <strong>Name</strong> {{ country?.name?.common}}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <!-- <strong>Capital</strong> {{cv?.firstname}} -->
+                    <strong>Capital</strong> {{country?.capital}}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <!-- <strong>Region</strong> {{cv?.job}} -->
+                    <strong>Region</strong> {{country?.region}}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <!-- <strong>Population</strong> {{cv?.age}} -->
+                    <strong>Population</strong> {{country?.population}}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <!-- <strong>Area</strong> {{cv?.cin}} -->
+                    <strong>Area</strong> {{country?.area}}
                   </td>
                 </tr>
                 <tr>
                     <td>
-                      <!-- <strong>Area</strong> {{cv?.cin}} -->
+                      <strong>Languages</strong> {{country?.languages}}
                     </td>
                   </tr>
                 </tbody>
