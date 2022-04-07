@@ -39,5 +39,6 @@ export class ApiService {
   
   selectCountry(country: Country){
     this.selectedCountrySubject.next(country);
+    
   }
 }

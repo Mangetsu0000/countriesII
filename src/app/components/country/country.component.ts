@@ -15,12 +15,14 @@ export class CountryComponent implements OnInit {
   constructor(private apiService: ApiService, private routerService: Router) { }
 
   ngOnInit(): void {
-    
   }
   onSeclectCountry(){
     if (this.country){
       this.apiService.selectCountry(this.country);
       this.routerService.navigate(['/countries/details',  this.country?.name?.common]);
+      console.log(`should be displaying ${this.country?.name?.common}'s details`);
+      console.log('this country is ', this.country);
+      
     }
   }
 }

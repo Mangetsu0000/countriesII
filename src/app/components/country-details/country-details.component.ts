@@ -14,7 +14,7 @@ export class CountryDetailsComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    // this.apiService.selectedCountry$.subscribe((country)=>{this.country= country});
+    this.apiService.selectedCountry$.subscribe((country)=>{this.country= country});
   }
 
 }
