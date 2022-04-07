@@ -10,14 +10,16 @@
 }
 .logo{
     float: left;
-    color: rgb(180, 132, 34);
+    color: white;
     padding: 10px 0;
     text-decoration: none;
     font-size: 30px;
+    text-shadow: 2px 2px 3px #333;
+    z-index: 2;
 }
 
 .logo:hover{
-    color: black;
+    color: rgb(180, 132, 34);
     transition: 300ms;
 }
 nav{
@@ -34,17 +36,22 @@ nav li{
     margin-left: 70px;
     padding-top: 17px;
     position: relative;
+    
 }
 nav a{
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: capitalize;
     font-size: 22px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px #333;
+    z-index: 2;
 
 }
 nav a:hover{
-    color: rgb(180, 132, 34);;
     transition: all ease-in-out 250ms;
+    text-shadow: 2px 2px 3px #333;
 }
 nav a::before{
     content: '';
@@ -52,12 +59,13 @@ nav a::before{
     height: 5px;
     width: 0%;
     bottom: -10%;
-    background: rgb(248, 246, 246);
+    background: white;
     position: absolute;
     transition: all ease-in-out 250ms;
 }
 nav a:hover::before{
     width: 100%;
+    
 }
 
 

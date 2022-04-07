@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-center" >
+<div class="d-flex justify-content-center container" >
     <div class="col-lg-8 push-lg-4">
       <div class="tab-content p-b-3">
         <div class="tab-pane active" id="profile">
-          <h4 class="m-y-2">
+          <h4 class="m-y-2 text-center">
             {{ country?.name?.common}}
           </h4>
           <div class="d-flex justify-content-center">
@@ -16,7 +16,7 @@
               <table class="table table-hover table-striped">
                 <tbody>
                 <tr>
-                  <td>
+                  <td id="odd">
                     <strong>Name</strong> {{ country?.name?.common}}
                   </td>
                 </tr>
@@ -26,7 +26,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td id="odd">
                     <strong>Region</strong> {{country?.region}}
                   </td>
                 </tr>
@@ -36,7 +36,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td id="odd">
                     <strong>Area</strong> {{country?.area}}
                   </td>
                 </tr>

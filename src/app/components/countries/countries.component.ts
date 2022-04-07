@@ -14,10 +14,6 @@ export class CountriesComponent implements OnInit {
 
   filteredCountriesByContinent:[]=[];
 
-  // continent$: Observable<string>;
-
-
-
   countries$ : Observable<Array<Country>> | undefined
 
   
@@ -25,7 +21,6 @@ export class CountriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.countries$ = this.api.getCountries(this.keyWord);
-    // this.countries$= this.api.getCountriesByContinent(this.continent$);
   }
 
   search(){
