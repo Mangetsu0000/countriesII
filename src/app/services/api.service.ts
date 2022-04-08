@@ -38,7 +38,7 @@ export class ApiService {
       return country.region?.toLowerCase() === continent.toLowerCase();
     })
     this.countries = this.filteredCountriesByContinent;
-    return of (this.countries);
+    return of (this.filteredCountries);
   }
   
   setCountry(country : Country){
@@ -46,5 +46,8 @@ export class ApiService {
   }
   getCountry(){
     return this.selectedCountry;
+  }
+  resetCountries(){
+    this.countries = COUNTRIES;
   }
 }
