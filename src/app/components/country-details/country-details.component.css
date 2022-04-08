@@ -10,5 +10,14 @@ strong, span, h4{
     color: white;
 }
 h4{
-    margin-top: 10px;
+    margin-top: 10;
+}
+
+.btn-div{
+    text-align:center;
+    margin: 8px 0;
+}
+button{
+    background-color:white;
+    color: #df5555;
 }

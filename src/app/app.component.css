@@ -1,5 +1,5 @@
 .container{
-    background:linear-gradient(0deg, rgba(202, 198, 200, 0.3), rgba(233, 224, 228, 0.3)), url('../assets/images/wcf.png');
+    background:linear-gradient(0deg, rgba(245, 244, 245, 0.3), rgba(131, 128, 128, 0.3)), url('../assets/images/wcf.png');
     height: 100vh;
     overflow: hidden;
 }

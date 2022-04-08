@@ -36,7 +36,7 @@ export class ApiService {
     this.routerService.navigate(['/countries', continent]);
     this.filteredCountriesByContinent = this.countries.filter((country)=>{
       return country.region?.toLowerCase() === continent.toLowerCase();
-    }); console.log(this.filteredCountriesByContinent);
+    })
     this.countries = this.filteredCountriesByContinent;
     return of (this.countries);
   }
