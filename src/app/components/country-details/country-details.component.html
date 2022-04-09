@@ -32,17 +32,17 @@
                 </tr>
                 <tr>
                   <td>
-                    <strong>Population</strong> {{country?.population}}
+                    <strong>Population</strong> {{country?.population  | number:'1.0'}}
                   </td>
                 </tr>
                 <tr>
                   <td id="odd">
-                    <strong>Area</strong> {{country?.area}}
+                    <strong>Area</strong> {{country?.area  | number:'1.0'}} Km²
                   </td>
                 </tr>
                 <tr>
                     <td>
-                      <strong>Languages</strong> {{languages}} 
+                      <strong>Languages</strong> {{languages}}
                     </td>
                 </tr>
                 <div class="btn-div">
@@ -58,4 +58,3 @@
       </div>
     </div>
   </div>
-  
