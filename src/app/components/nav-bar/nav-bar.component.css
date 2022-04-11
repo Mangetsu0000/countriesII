@@ -34,7 +34,8 @@ nav ul{
 nav li{
     display: inline-block;
     margin-left: 70px;
-    padding-top: 17px;
+    padding-top: 12px;
+    padding-right: 14px;
     position: relative;
 
 }
@@ -47,11 +48,11 @@ nav a{
     font-weight: 400;
     text-shadow: 2px 2px 3px #333;
     z-index: 2;
-
 }
 nav a:hover{
     transition: all ease-in-out 250ms;
     text-shadow: 2px 2px 3px #333;
+    color: rgb(180, 132, 34);
 }
 nav a::before{
     content: '';
@@ -64,6 +65,14 @@ nav a::before{
     transition: all ease-in-out 250ms;
 }
 nav a:hover::before{
-    width: 100%;
-
+    width: 90%;
+}
+.container{
+  background: rgba(244, 234, 234, 0.5);
+  border-radius: 50px;
+  width: 80vw;
+  margin-top: 5px;
+}
+h4{
+  padding-left: 14px;
 }
