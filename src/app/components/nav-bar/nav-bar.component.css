@@ -10,11 +10,10 @@
 }
 .logo{
     float: left;
-    color: white;
+    color: #333;
     padding: 10px 0;
     text-decoration: none;
     font-size: 30px;
-    text-shadow: 2px 2px 3px #333;
     z-index: 2;
 }
 
@@ -41,18 +40,17 @@ nav li{
 }
 nav a{
     text-decoration: none;
-    color: white;
+    color: #333;
     text-transform: capitalize;
     font-size: 22px;
     line-height: 1.4;
     font-weight: 400;
-    text-shadow: 2px 2px 3px #333;
     z-index: 2;
 }
 nav a:hover{
     transition: all ease-in-out 250ms;
-    text-shadow: 2px 2px 3px #333;
-    color: rgb(180, 132, 34);
+    text-shadow: 2px 2px 3px white;
+    color: white;
 }
 nav a::before{
     content: '';
