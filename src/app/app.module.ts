@@ -10,6 +10,7 @@ import { ContinentsPageComponent } from './components/continents-page/continents
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
 import { CountryDetailsComponent } from './components/country-details/country-details.component';
+import { NOTFOUNDComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CountryDetailsComponent } from './components/country-details/country-de
     ContinentsPageComponent,
     NavBarComponent,
     CountryDetailsComponent,
+    NOTFOUNDComponent,
   ],
   imports: [
     BrowserModule,

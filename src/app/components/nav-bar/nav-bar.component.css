@@ -23,8 +23,8 @@
     transition: 300ms;
 }
 nav{
-    float: right;  
-      
+    float: right;
+
 }
 nav ul{
     margin: 0;
@@ -36,7 +36,7 @@ nav li{
     margin-left: 70px;
     padding-top: 17px;
     position: relative;
-    
+
 }
 nav a{
     text-decoration: none;
@@ -65,7 +65,5 @@ nav a::before{
 }
 nav a:hover::before{
     width: 100%;
-    
+
 }
-
-
